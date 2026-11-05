@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>金牌影院在线观看-金牌影院在线观看免费_高清电影电视剧在线播放平台</title>
+<meta name="description" content="金牌影院在线观看是面向影迷的高清影视聚合入口，提供电影、剧集、纪录片与动漫的分类浏览、片单推荐与播放指引，帮助观众快速找到想看的影片并了解金牌影院在线观看的选片思路。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a1d2b'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23e8b04b' stroke-width='3'/%3E%3Cpath d='M27 24l14 8-14 8z' fill='%23e8b04b'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#171a24;
+    --ink-soft:#3d4254;
+    --muted:#6b7185;
+    --line:#e3e2dd;
+    --paper:#f7f5f0;
+    --card:#ffffff;
+    --gold:#c9973a;
+    --gold-soft:#f3e7cd;
+    --night:#1a1d2b;
+    --night-soft:#262a3d;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img,svg{max-width:100%;display:block;}
+  .wrap{width:min(1120px,calc(100% - 40px));margin:0 auto;}
+
+  /* ---------- header ---------- */
+  .site-head{
+    position:sticky;top:0;z-index:50;
+    background:rgba(26,29,43,.96);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(232,176,75,.22);
+  }
+  .head-inner{
+    display:flex;align-items:center;gap:28px;
+    min-height:68px;
+  }
+  .logo{
+    display:flex;align-items:center;gap:10px;
+    color:#f5efe2;font-weight:700;font-size:17px;letter-spacing:.5px;
+    white-space:nowrap;
+  }
+  .logo .mark{
+    width:34px;height:34px;flex:0 0 34px;
+    display:grid;place-items:center;
+    border-radius:9px;
+    background:linear-gradient(150deg,#2c3147,#181b28);
+    border:1px solid rgba(232,176,75,.45);
+  }
+  .logo .mark svg{width:20px;height:20px;}
+  .nav{
+    display:flex;gap:22px;margin-left:auto;
+    font-size:14.5px;color:#c9cbd6;
+    flex-wrap:wrap;
+  }
+  .nav a{padding:6px 2px;border-bottom:2px solid transparent;transition:.2s;}
+  .nav a:hover{color:#f0c163;border-bottom-color:#e8b04b;}
+  .nav .cta{
+    color:#1a1d2b;background:#e8b04b;
+    padding:7px 16px;border-radius:999px;font-weight:600;
+    border-bottom:none;
+  }
+  .nav .cta:hover{background:#f2c163;color:#1a1d2b;}
+
+  /* ---------- hero ---------- */
+  .hero{
+    background:
+      radial-gradient(900px 380px at 82% -10%,rgba(201,151,58,.20),transparent 62%),
+      linear-gradient(165deg,#1a1d2b 0%,#232739 58%,#1c1f2e 100%);
+    color:#eef0f6;
+    padding:64px 0 58px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;right:-90px;bottom:-120px;
+    width:340px;height:340px;border-radius:50%;
+    border:1px solid rgba(232,176,75,.20);
+    box-shadow:0 0 0 46px rgba(232,176,75,.05);
+  }
+  .hero-grid{
+    display:grid;grid-template-columns:1.35fr .9fr;gap:52px;align-items:center;
+    position:relative;z-index:2;
+  }
+  .kicker{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12.5px;letter-spacing:2px;color:#e8b04b;
+    border:1px solid rgba(232,176,75,.4);
+    border-radius:999px;padding:4px 14px;margin-bottom:20px;
+  }
+  .kicker::before{content:"";width:6px;height:6px;border-radius:50%;background:#e8b04b;}
+  h1{
+    font-size:clamp(27px,3.4vw,42px);
+    line-height:1.28;
+    margin:0 0 18px;
+    font-weight:800;
+    letter-spacing:.5px;
+  }
+  h1 .hl{color:#f0c163;}
+  .hero p.lead{
+    font-size:15.5px;color:#c3c7d6;margin:0 0 26px;max-width:38em;
+  }
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:12px 24px;border-radius:10px;font-size:15px;font-weight:600;
+    transition:.2s;border:1px solid transparent;
+  }
+  .btn-primary{background:#e8b04b;color:#1a1d2b;}
+  .btn-primary:hover{background:#f4c463;transform:translateY(-1px);}
+  .btn-ghost{color:#e7e9f1;border-color:rgba(233,235,244,.32);}
+  .btn-ghost:hover{border-color:#e8b04b;color:#f4c463;}
+  .btn[aria-disabled="true"]{cursor:default;}
+  .hero-note{font-size:12.5px;color:#8d93a8;margin-top:16px;}
+
+  /* poster panel */
+  .poster-panel{
+    background:linear-gradient(160deg,#262a3d,#1b1e2c);
+    border:1px solid rgba(232,176,75,.24);
+    border-radius:16px;
+    padding:20px 20px 16px;
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+  }
+  .poster-panel h3{
+    margin:0 0 14px;font-size:13.5px;letter-spacing:1.5px;color:#e8b04b;font-weight:600;
+  }
+  .poster-row{display:flex;gap:12px;}
+  .poster{
+    flex:1;aspect-ratio:2/3;border-radius:9px;position:relative;overflow:hidden;
+    border:1px solid rgba(255,255,255,.09);
+    display:grid;place-items:center;
+  }
+  .poster span{
+    position:absolute;bottom:8px;left:0;right:0;text-align:center;
+    font-size:11px;color:rgba(255,255,255,.86);letter-spacing:1px;
+  }
+  .p1{background:linear-gradient(150deg,#4b3a63,#241d33);}
+  .p2{background:linear-gradient(150deg,#2f4a53,#1a2a30);}
+  .p3{background:linear-gradient(150deg,#5a4432,#2b2018);}
+  .poster svg{width:34px;height:34px;opacity:.55;}
+
+  /* ---------- section base ---------- */
+  section{padding:58px 0;}
+  .sec-head{margin-bottom:30px;}
+  .sec-head .eyebrow{
+    font-size:12.5px;letter-spacing:2.5px;color:var(--gold);font-weight:600;
+    display:block;margin-bottom:8px;
+  }
+  h2{
+    font-size:clamp(21px,2.2vw,27px);
+    margin:0 0 10px;font-weight:800;letter-spacing:.4px;
+  }
+  .sec-head p{margin:0;color:var(--muted);font-size:14.5px;max-width:52em;}
+
+  /* ---------- categories ---------- */
+  .cat-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
+  }
+  .cat-card{
+    background:var(--card);border:1px solid var(--line);border-radius:13px;
+    padding:22px 20px;transition:.22s;
+    display:flex;flex-direction:column;gap:8px;
+  }
+  .cat-card:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 12px 26px rgba(26,29,43,.08);}
+  .cat-icon{
+    width:40px;height:40px;border-radius:10px;background:var(--gold-soft);
+    display:grid;place-items:center;margin-bottom:4px;
+  }
+  .cat-icon svg{width:21px;height:21px;stroke:#a97a22;fill:none;stroke-width:1.7;}
+  .cat-card h3{margin:0;font-size:16.5px;font-weight:700;}
+  .cat-card p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.65;}
+  .cat-card .more{font-size:13px;color:var(--gold);font-weight:600;margin-top:4px;}
+
+  /* ---------- picks ---------- */
+  .picks{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .pick-list{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .pick{
+    border:1px solid var(--line);border-radius:13px;overflow:hidden;background:var(--paper);
+    display:flex;flex-direction:column;
+  }
+  .pick-thumb{
+    height:118px;display:grid;place-items:center;
+    border-bottom:1px solid var(--line);
+  }
+  .pick-thumb svg{width:40px;height:40px;opacity:.7;}
+  .t1{background:linear-gradient(135deg,#e8ddc6,#d8c8a4);}
+  .t2{background:linear-gradient(135deg,#d3dde3,#b8c8d2);}
+  .t3{background:linear-gradient(135deg,#e2d3d6,#cbb4b9);}
+  .pick-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:7px;flex:1;}
+  .tagline{font-size:11.5px;letter-spacing:1.5px;color:var(--gold);font-weight:700;}
+  .pick-body h3{margin:0;font-size:16.5px;}
+  .pick-body p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.7;flex:1;}
+  .meta{font-size:12.5px;color:#8a8f9f;border-top:1px dashed var(--line);padding-top:9px;}
+
+  /* ---------- guide / article ---------- */
+  .guide-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:44px;align-items:start;}
+  .prose p{font-size:15px;color:var(--ink-soft);margin:0 0 16px;}
+  .prose h3{font-size:17px;margin:26px 0 10px;font-weight:700;}
+  .prose h3:first-child{margin-top:0;}
+  .side-card{
+    background:var(--night);color:#dfe2ec;border-radius:14px;padding:24px 22px;
+    border:1px solid var(--night-soft);
+  }
+  .side-card h3{margin:0 0 14px;font-size:15.5px;color:#f0c163;letter-spacing:.5px;}
+  .side-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;}
+  .side-list li{
+    font-size:13.5px;color:#b9bed0;line-height:1.65;
+    padding-left:16px;position:relative;
+  }
+  .side-list li::before{
+    content:"";position:absolute;left:0;top:9px;width:6px;height:6px;
+    border-radius:50%;background:#e8b04b;
+  }
+  .side-list strong{color:#f0f2f8;font-weight:600;}
+  .side-foot{margin-top:18px;font-size:12px;color:#7d8397;border-top:1px solid rgba(255,255,255,.1);padding-top:12px;}
+
+  /* ---------- steps ---------- */
+  .steps{background:#fff;border-top:1px solid var(--line);}
+  .step-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:s;}
+  .step{
+    border-left:3px solid var(--gold);
+    background:var(--paper);
+    border-radius:0 12px 12px 0;
+    padding:20px 22px;
+  }
+  .step .num{
+    font-size:12px;letter-spacing:2px;color:var(--gold);font-weight:700;
+  }
+  .step h3{margin:6px 0 8px;font-size:16px;}
+  .step p{margin:0;font-size:13.5px;color:var(--muted);line-height:1.7;}
+
+  /* ---------- faq ---------- */
+  .faq-list{display:flex;flex-direction:column;gap:14px;max-width:900px;}
+  details{
+    background:#fff;border:1px solid var(--line);border-radius:12px;
+    padding:0 20px;transition:.2s;
+  }
+  details[open]{border-color:var(--gold);}
+  summary{
+    cursor:pointer;font-size:15px;font-weight:600;padding:16px 0;
+    list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:center;
+  }
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:"+";color:var(--gold);font-size:19px;font-weight:400;line-height:1;}
+  details[open] summary::after{content:"–";}
+  details p{margin:0 0 16px;font-size:14px;color:var(--ink-soft);line-height:1.8;}
+
+  /* ---------- cta band ---------- */
+  .band{
+    background:linear-gradient(140deg,#1a1d2b,#2a2f45);
+    color:#eef0f6;border-radius:18px;padding:44px 40px;
+    display:flex;gap:36px;align-items:center;justify-content:space-between;flex-wrap:wrap;
+    border:1px solid rgba(232,176,75,.22);
+  }
+  .band h2{margin:0 0 8px;color:#fff;}
+  .band p{margin:0;color:#b9bed0;font-size:14.5px;max-width:46em;}
+
+  /* ---------- footer ---------- */
+  footer.site-foot{
+    background:#14161f;color:#9298ab;margin-top:58px;
+    padding:44px 0 28px;font-size:13.5px;
+  }
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:36px;}
+  .foot-brand{display:flex;align-items:center;gap:10px;color:#f0e9d8;font-weight:700;font-size:15.5px;margin-bottom:12px;}
+  .foot-brand .mark{
+    width:30px;height:30px;border-radius:8px;display:grid;place-items:center;
+    background:linear-gradient(150deg,#2c3147,#181b28);border:1px solid rgba(232,176,75,.4);
+  }
+  .foot-brand .mark svg{width:17px;height:17px;}
+  .foot-col h4{margin:0 0 12px;font-size:13px;letter-spacing:1.5px;color:#c9cbd6;font-weight:600;}
+  .foot-col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;}
+  .foot-col a:hover{color:#f0c163;}
+  .foot-bottom{
+    border-top:1px solid rgba(255,255,255,.08);margin-top:32px;padding-top:18px;
+    display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:#6f7488;
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width:940px){
+    .hero-grid{grid-template-columns:1fr;gap:36px;}
+    .poster-panel{max-width:420px;}
+    .cat-grid{grid-template-columns:repeat(2,1fr);}
+    .pick-list{grid-template-columns:1fr;}
+    .guide-grid{grid-template-columns:1fr;gap:30px;}
+    .step-row{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr 1fr;gap:26px;}
+  }
+  @media (max-width:640px){
+    .wrap{width:calc(100% - 32px);}
+    .head-inner{flex-wrap:wrap;gap:10px;padding:12px 0;min-height:0;}
+    .nav{margin-left:0;width:100%;gap:14px;font-size:13.5px;overflow-x:auto;padding-bottom:2px;}
+    .nav a{white-space:nowrap;}
+    .nav .cta{padding:6px 13px;}
+    .hero{padding:44px 0 40px;}
+    .hero p.lead{font-size:14.5px;}
+    section{padding:44px 0;}
+    .cat-grid{grid-template-columns:1fr;gap:14px;}
+    .band{padding:30px 22px;}
+    .foot-grid{grid-template-columns:1fr;}
+    .prose p{font-size:14.5px;}
+  }
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="logo" href="#top" aria-label="金牌影院在线观看 首页">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="32" r="18" fill="none" stroke="#e8b04b" stroke-width="3"/>
+          <path d="M27 23l15 9-15 9z" fill="#e8b04b"/>
+        </svg>
+      </span>
+      金牌影院在线观看
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#categories">影片分类</a>
+      <a href="#picks">本周片单</a>
+      <a href="#guide">选片指南</a>
+      <a href="#steps">播放步骤</a>
+      <a href="#faq">常见问题</a>
+      <a class="cta" href="#picks">进入片单</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="kicker">高清影视 · 分类聚合</span>
+        <h1>金牌影院在线观看</h1>
+        <p class="lead">金牌影院在线观看把电影、剧集、纪录片与动漫按类型、地区和年份重新整理，让你在同一个入口完成找片、看简介、挑片单三件事。不熟悉片名时，从分类和片单出发往往比直接搜索更快。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#picks">浏览本周片单</a>
+          <a class="btn btn-ghost" href="#categories">按分类找片</a>
+        </div>
+        <p class="hero-note">页面内容为选片与播放指引，播放地址以实际可用资源为准。</p>
+      </div>
+
+      <aside class="poster-panel" aria-label="本周精选三张片单">
+        <h3>本周精选</h3>
+        <div class="poster-row">
+          <div class="poster p1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#f0c163" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9l5 3-5 3z" fill="#f0c163" stroke="none"/></svg>
+            <span>剧情长片</span>
+          </div>
+          <div class="poster p2">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#cfe3e8" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 10h16M10 4v16"/></svg>
+            <span>连载剧集</span>
+          </div>
+          <div class="poster p3">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#f0d5b0" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg>
+            <span>纪录短片</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section id="categories">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">CATEGORIES</span>
+        <h2>按类型进入影片库</h2>
+        <p>金牌影院在线观看的分类以观影决策为线索：先确定想看什么类型，再按地区与年份收窄范围，比漫无目的翻页更省时间。</p>
+      </div>
+      <div class="cat-grid">
+        <a class="cat-card" href="#picks">
+          <span class="cat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9l5 3-5 3z"/></svg></span>
+          <h3>电影长片</h3>
+          <p>剧情、悬疑、动作与文艺片混排，标注时长与年份，适合一次看完的完整叙事。</p>
+          <span class="more">查看片单 →</span>
+        </a>
+        <a class="cat-card" href="#picks">
+          <span class="cat-icon"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 10h16M10 4v16"/></svg></span>
+          <h3>连载剧集</h3>
+          <p>按季与集数排序，标注更新进度，适合追更观众按顺序观看不跳集。</p>
+          <span class="more">查看片单 →</span>
+        </a>
+        <a class="cat-card" href="#picks">
+          <span class="cat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg></span>
+          <h3>纪录片</h3>
+          <p>自然、历史与人文题材为主，单集时长适中，适合碎片时间连续观看。</p>
+          <span class="more">查看片单 →</span>
+        </a>
+        <a class="cat-card" href="#picks">
+          <span class="cat-icon"><svg viewBox="0 0 24 24"><path d="M5 16l4-8 4 5 3-4 3 7z"/><circle cx="17" cy="6" r="2"/></svg></span>
+          <h3>动漫动画</h3>
+          <p>剧集与剧场版分列，标注语言版本，方便按配音偏好筛选。</p>
+          <span class="more">查看片单 →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PICKS -->
+  <section id="picks" class="picks">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">WEEKLY LIST</span>
+        <h2>本周片单：三种不同的观看节奏</h2>
+        <p>片单按“一次看完、连续追更、短时观看”三种节奏编排，每张卡片给出片长与适合场景，减少选片时的犹豫。</p>
+      </div>
+      <div class="pick-list">
+        <article class="pick">
+          <div class="pick-thumb t1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#8a6a2a" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9l5 3-5 3z" fill="#8a6a2a" stroke="none"/></svg>
+          </div>
+          <div class="pick-body">
+            <span class="tagline">一次看完</span>
+            <h3>剧情长片 · 周末专场</h3>
+            <p>适合完整留出两小时以上的夜晚。影片信息页给出时长、年份与一句话梗概，先看梗概再决定是否播放。</p>
+            <span class="meta">建议场景：周末晚间 · 单人观看</span>
+          </div>
+        </article>
+        <article class="pick">
+          <div class="pick-thumb t2">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#4f6c78" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 10h16M10 4v16"/></svg>
+          </div>
+          <div class="pick-body">
+            <span class="tagline">连续追更</span>
+            <h3>连载剧集 · 按季排序</h3>
+            <p>剧集卡片标注已更新集数与当前季数，追更时从上次位置继续，不必重新翻找集数列表。</p>
+            <span class="meta">建议场景：工作日晚间 · 每日一集</span>
+          </div>
+        </article>
+        <article class="pick">
+          <div class="pick-thumb t3">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#7d5b61" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg>
+          </div>
+          <div class="pick-body">
+            <span class="tagline">短时观看</span>
+            <h3>纪录片 · 单集完结</h3>
+            <p>每集独立成篇，适合通勤或午休时段。片单中标注单集时长，避免打开后发现看不完。</p>
+            <span class="meta">建议场景：午休 · 通勤途中</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDE -->
+  <section id="guide">
+    <div class="wrap guide-grid">
+      <div class="prose">
+        <h3>金牌影院在线观看能解决什么问题</h3>
+        <p>面对数量庞大的影视资源，观众最常见的困扰不是没有内容，而是不知道从哪一部开始。金牌影院在线观看把影片按类型、地区、年份和观看节奏重新组织，并用短梗概替代冗长简介，让判断发生在点击播放之前。</p>
+        <p>对已经明确片名的观众，直接搜索即可；对只记得大致情节的观众，可以通过分类交叉筛选，例如“悬疑 + 近三年 + 剧集”，把范围从数百部收窄到十几部，再从片单里挑选。</p>
+
+        <h3>片单如何编排</h3>
+        <p>片单以观看场景为第一维度：一次看完的长片、需要连续追更的剧集、单集即完结的纪录片。每张卡片都标注片长与适合场景，这个信息比评分更能决定“今晚是否看得完”。</p>
+        <p>同一部影片在分类页和片单页出现时，承担的任务不同：分类页给出筛选路径，片单页给出观看节奏建议，两者互为补充，不重复堆砌相同描述。</p>
+
+        <h3>关于播放与资源状态</h3>
+        <p>影视内容的可播放状态会随时间变化，本页不承诺任何具体影片长期可看。页面中的片单、分类与步骤说明属于选片指引，实际播放以进入对应页面后的资源状态为准。遇到无法播放的情况，可回到分类页换一部同类影片，或调整年份与地区条件重新筛选。</p>
+      </div>
+
+      <aside class="side-card">
+        <h3>选片三步法</h3>
+        <ul class="side-list">
+          <li><strong>定类型</strong>：先选电影、剧集、纪录片或动漫，缩小到一类内容。</li>
+          <li><strong>加条件</strong>：叠加地区与年份，避免被过旧或无关内容干扰。</li>
+          <li><strong>看节奏</strong>：对照片长与场景标签，确认当前时间能否看完。</li>
+        </ul>
+        <p class="side-foot">以上方法适用于本页所有分类与片单入口，可按个人习惯调整顺序。</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section id="steps" class="steps">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">HOW TO START</span>
+        <h2>从进入到开始播放</h2>
+        <p>金牌影院在线观看的使用路径保持简短：选分类、看片单、进详情，三步之内完成从浏览到播放的决定。</p>
+      </div>
+      <div class="step-row">
+        <div class="step">
+          <span class="num">STEP 01</span>
+          <h3>选择分类</h3>
+          <p>在“按类型进入影片库”中确定电影、剧集、纪录片或动漫，作为第一层筛选条件。</p>
+        </div>
+        <div class="step">
+          <span class="num">STEP 02</span>
+          <h3>对照片单</h3>
+          <p>查看本周片单的场景标签与片长，判断当前时间段适合长片还是单集内容。</p>
+        </div>
+        <div class="step">
+          <span class="num">STEP 03</span>
+          <h3>进入详情</h3>
+          <p>在影片信息页确认年份、集数与简介后开始播放，未看完的剧集可回到原分类继续。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">FAQ</span>
+        <h2>关于金牌影院在线观看的常见问题</h2>
+        <p>以下问题围绕找片、分类与播放状态展开，答案与本页内容口径一致。</p>
+      </div>
+      <div class="faq-list">
+        <details open>
+          <summary>金牌影院在线观看主要是做什么的？</summary>
+          <p>它把电影、剧集、纪录片与动漫集中在一个入口，提供分类浏览、片单推荐与播放指引，帮助观众更快决定看什么，而不是在多个页面之间反复跳转。</p>
+        </details>
+        <details>
+          <summary>只记得情节、不记得片名怎么办？</summary>
+          <p>可以先用分类确定类型，再叠加地区与年份条件收窄范围，然后从片单的短梗概中比对情节。相比直接搜索，这种方式更适合模糊记忆的情形。</p>
+        </details>
+        <details>
+          <summary>影片一定能播放吗？</summary>
+          <p>本页只提供选片与播放指引，不承诺具体影片的长期可播放状态。资源状态可能变化，遇到无法播放时可换同类影片或调整筛选条件。</p>
+        </details>
+        <details>
+          <summary>剧集追更时如何不跳集？</summary>
+          <p>剧集按季与集数排序，卡片上标注更新进度。追更时从剧集信息页按集数顺序进入，即可避免跳集或重复观看。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section>
+    <div class="wrap">
+      <div class="band">
+        <div>
+          <h2>现在开始选一部</h2>
+          <p>从本周片单里挑一部符合当下时间的影片，或按分类自行筛选。金牌影院在线观看的片单每周更新一次，分类页长期保留完整入口。</p>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#picks">查看片单</a>
+          <a class="btn btn-ghost" href="#categories">全部分类</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="18" fill="none" stroke="#e8b04b" stroke-width="3"/>
+              <path d="M27 23l15 9-15 9z" fill="#e8b04b"/>
+            </svg>
+          </span>
+          金牌影院在线观看
+        </div>
+        <p style="margin:0;max-width:30em;line-height:1.8;">金牌影院在线观看提供电影、剧集、纪录片与动漫的分类浏览与片单推荐，页面内容为选片与播放指引，具体资源状态以实际页面为准。</p>
+      </div>
+      <div class="foot-col">
+        <h4>内容入口</h4>
+        <ul>
+          <li><a href="#categories">影片分类</a></li>
+          <li><a href="#picks">本周片单</a></li>
+          <li><a href="#guide">选片指南</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>使用帮助</h4>
+        <ul>
+          <li><a href="#steps">播放步骤</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#top">返回顶部</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2024 金牌影院在线观看 · 影视选片指引</span>
+      <span>页面信息随片单更新，播放状态以实际资源为准</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+        </html>
