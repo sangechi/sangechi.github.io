@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一本在线免费观看-一本在线免费观看_一本免费在线阅读_一本在线看平台</title>
+<meta name="description" content="一本在线免费观看主题首页，讲解一本免费在线阅读的访问方式、章节浏览、阅读入口与使用注意事项，帮助读者快速找到一本在线免费观看的阅读路径。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f4d3a'/%3E%3Cpath d='M16 18h13a5 5 0 0 1 5 5v24a5 5 0 0 0-5-5H16z' fill='%23f2e7c9'/%3E%3Cpath d='M48 18H35a5 5 0 0 0-5 5v24a5 5 0 0 1 5-5h13z' fill='%23e0ca97'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#1d2b24;
+  --ink-soft:#4a5b52;
+  --green:#1f4d3a;
+  --green-deep:#163a2b;
+  --paper:#f7f3e8;
+  --paper-2:#fffdf7;
+  --line:#dcd4bf;
+  --gold:#b08a3e;
+  --gold-soft:#e6d6ae;
+  --radius:14px;
+  --maxw:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Songti SC","Noto Serif CJK SC","Source Han Serif SC",Georgia,"Microsoft YaHei",serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 22px}
+
+/* ---------- header ---------- */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(247,243,232,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:18px;min-height:68px;
+}
+.brand{display:flex;align-items:center;gap:11px;flex-shrink:0}
+.brand-mark{width:38px;height:38px;flex:0 0 38px}
+.brand-text{
+  font-size:1.02rem;font-weight:700;letter-spacing:.02em;
+  color:var(--green-deep);line-height:1.3;
+}
+.nav-links{display:flex;align-items:center;gap:26px;font-size:.95rem;color:var(--ink-soft)}
+.nav-links a{padding:6px 0;border-bottom:2px solid transparent;transition:.2s}
+.nav-links a:hover{color:var(--green);border-bottom-color:var(--gold)}
+.nav-cta{
+  display:inline-block;background:var(--green);color:var(--paper-2);
+  padding:9px 20px;border-radius:999px;font-size:.92rem;
+  white-space:nowrap;transition:.2s;
+}
+.nav-cta:hover{background:var(--green-deep)}
+@media(max-width:760px){
+  .nav{flex-wrap:wrap;padding:12px 0;gap:10px}
+  .nav-links{gap:18px;order:3;width:100%;overflow-x:auto;font-size:.9rem;padding-bottom:2px}
+  .nav-cta{padding:8px 16px;font-size:.86rem}
+}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;
+  padding:64px 0 56px;
+  background:
+    radial-gradient(900px 380px at 82% -10%, rgba(176,138,62,.16), transparent 70%),
+    linear-gradient(180deg,#fbf8ef 0%,#f7f3e8 100%);
+  border-bottom:1px solid var(--line);
+  overflow:hidden;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.15fr .85fr;
+  gap:52px;align-items:center;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.8rem;letter-spacing:.16em;color:var(--gold);
+  border:1px solid var(--gold-soft);background:#fffdf5;
+  padding:5px 13px;border-radius:999px;margin-bottom:20px;
+}
+.eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold)}
+h1{
+  font-size:clamp(1.75rem,3.6vw,2.7rem);
+  line-height:1.35;font-weight:800;color:var(--green-deep);
+  letter-spacing:.01em;margin-bottom:18px;
+}
+.hero-lead{
+  font-size:1.02rem;color:var(--ink-soft);max-width:34em;margin-bottom:28px;
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.btn-primary{
+  display:inline-block;background:var(--green);color:#fffdf7;
+  padding:13px 30px;border-radius:999px;font-size:1rem;
+  box-shadow:0 8px 20px -10px rgba(31,77,58,.75);transition:.2s;
+}
+.btn-primary:hover{background:var(--green-deep);transform:translateY(-1px)}
+.btn-ghost{
+  display:inline-block;border:1px solid var(--green);
+  color:var(--green);padding:12px 26px;border-radius:999px;font-size:.95rem;transition:.2s;
+}
+.btn-ghost:hover{background:rgba(31,77,58,.07)}
+.hero-note{margin-top:22px;font-size:.86rem;color:#77867d}
+
+.hero-art{
+  background:var(--paper-2);
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:26px 24px 22px;
+  box-shadow:0 24px 50px -34px rgba(29,43,36,.5);
+}
+.hero-art-title{font-size:.82rem;letter-spacing:.14em;color:var(--gold);margin-bottom:14px}
+.shelf{display:grid;gap:12px}
+.shelf-row{
+  display:flex;align-items:center;gap:12px;
+  padding:11px 13px;border-radius:10px;background:#fbf8ee;border:1px solid #ece4d1;
+}
+.shelf-row svg{width:26px;height:26px;flex:0 0 26px}
+.shelf-row span{font-size:.9rem;color:var(--ink-soft)}
+.shelf-row b{color:var(--green-deep);font-weight:700}
+@media(max-width:880px){
+  .hero{padding:40px 0 38px}
+  .hero-grid{grid-template-columns:1fr;gap:32px}
+  .hero-lead{font-size:.98rem}
+}
+
+/* ---------- section base ---------- */
+section{padding:64px 0}
+.sec-head{max-width:44em;margin-bottom:36px}
+.sec-tag{
+  font-size:.78rem;letter-spacing:.18em;color:var(--gold);
+  text-transform:uppercase;margin-bottom:10px;
+}
+h2{
+  font-size:clamp(1.3rem,2.4vw,1.72rem);
+  color:var(--green-deep);font-weight:800;line-height:1.45;margin-bottom:12px;
+}
+.sec-head p{color:var(--ink-soft);font-size:.98rem}
+
+/* ---------- cards ---------- */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{
+  background:var(--paper-2);border:1px solid var(--line);
+  border-radius:var(--radius);padding:26px 24px;
+  transition:.22s;
+}
+.card:hover{border-color:var(--gold-soft);box-shadow:0 18px 36px -28px rgba(29,43,36,.55)}
+.card-ico{
+  width:44px;height:44px;border-radius:11px;background:#f1ead7;
+  display:flex;align-items:center;justify-content:center;margin-bottom:16px;
+}
+.card-ico svg{width:24px;height:24px}
+.card h3{font-size:1.06rem;color:var(--green-deep);margin-bottom:9px;font-weight:700}
+.card p{font-size:.93rem;color:var(--ink-soft)}
+@media(max-width:860px){
+  .cards{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+  section{padding:44px 0}
+  .cards{grid-template-columns:1fr;gap:16px}
+}
+
+/* ---------- guide split ---------- */
+.guide{
+  background:#fbf8ee;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.guide-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:50px;align-items:start}
+.steps{list-style:none;counter-reset:step;display:grid;gap:18px}
+.steps li{
+  counter-increment:step;position:relative;
+  padding:18px 20px 18px 62px;background:var(--paper-2);
+  border:1px solid var(--line);border-radius:12px;
+}
+.steps li::before{
+  content:counter(step,decimal-leading-zero);
+  position:absolute;left:20px;top:18px;
+  font-size:.9rem;font-weight:800;color:var(--green);
+  letter-spacing:.04em;
+}
+.steps li strong{display:block;color:var(--green-deep);font-size:1rem;margin-bottom:5px}
+.steps li span{font-size:.92rem;color:var(--ink-soft)}
+.guide-side p{color:var(--ink-soft);font-size:.96rem;margin-bottom:16px}
+.guide-side p strong{color:var(--green-deep)}
+.checklist{list-style:none;display:grid;gap:11px;margin-top:6px}
+.checklist li{
+  position:relative;padding-left:24px;font-size:.93rem;color:var(--ink-soft);
+}
+.checklist li::before{
+  content:"";position:absolute;left:0;top:.62em;
+  width:9px;height:9px;border-radius:50%;
+  background:var(--gold-soft);border:1.5px solid var(--gold);
+}
+@media(max-width:880px){
+  .guide-grid{grid-template-columns:1fr;gap:32px}
+}
+
+/* ---------- reader panel ---------- */
+.reader{
+  background:var(--green-deep);color:#eee7d5;border-radius:20px;
+  padding:44px 42px;display:grid;grid-template-columns:1.1fr .9fr;
+  gap:44px;align-items:center;margin-top:8px;
+}
+.reader h2{color:#f4eeda}
+.reader p{color:#c8d3cb;font-size:.96rem;margin-bottom:14px}
+.reader .mini{
+  display:grid;gap:10px;font-size:.9rem;color:#d7dfd8;
+}
+.reader .mini div{
+  display:flex;justify-content:space-between;gap:14px;
+  padding:11px 16px;border-radius:10px;background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.12);
+}
+.reader .mini b{color:#f4eeda;font-weight:700}
+.reader .btn-primary{background:var(--gold);color:#231a08;box-shadow:none;margin-top:6px}
+.reader .btn-primary:hover{background:#c99f50}
+@media(max-width:860px){
+  .reader{grid-template-columns:1fr;padding:32px 24px;gap:26px}
+}
+
+/* ---------- faq ---------- */
+.faq{display:grid;gap:14px}
+details{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:12px;
+  padding:0 20px;
+}
+details[open]{border-color:var(--gold-soft)}
+summary{
+  cursor:pointer;list-style:none;padding:17px 0;
+  font-weight:700;color:var(--green-deep);font-size:.99rem;
+  display:flex;justify-content:space-between;align-items:center;gap:14px;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold);font-weight:400;font-size:1.3rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{padding:0 0 18px;font-size:.93rem;color:var(--ink-soft);max-width:60em}
+
+/* ---------- footer ---------- */
+footer{
+  background:#163a2b;color:#c3d0c8;padding:46px 0 30px;margin-top:0;
+}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:34px;margin-bottom:30px}
+.foot-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.foot-brand svg{width:32px;height:32px}
+.foot-brand span{color:#f4eeda;font-weight:700;font-size:1rem}
+.foot-grid p{font-size:.89rem;line-height:1.8;color:#a9b8ae;max-width:26em}
+.foot-col h4{font-size:.85rem;letter-spacing:.1em;color:#e6d6ae;margin-bottom:13px;font-weight:700}
+.foot-col a{display:block;font-size:.89rem;color:#b9c6bd;padding:4px 0;transition:.2s}
+.foot-col a:hover{color:#f4eeda}
+.foot-bottom{
+  border-top:1px solid rgba(255,255,255,.12);padding-top:20px;
+  font-size:.82rem;color:#8fa096;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;
+}
+@media(max-width:760px){
+  .foot-grid{grid-template-columns:1fr 1fr;gap:26px}
+  .foot-grid > div:first-child{grid-column:1/-1}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="一本在线免费观看首页">
+      <svg class="brand-mark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#1f4d3a"/>
+        <path d="M16 18h13a5 5 0 0 1 5 5v24a5 5 0 0 0-5-5H16z" fill="#f2e7c9"/>
+        <path d="M48 18H35a5 5 0 0 0-5 5v24a5 5 0 0 1 5-5h13z" fill="#e0ca97"/>
+      </svg>
+      <span class="brand-text">一本在线免费观看</span>
+    </a>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="#access">阅读入口</a>
+      <a href="#guide">使用步骤</a>
+      <a href="#notice">阅读须知</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <a class="nav-cta" href="#access">开始阅读</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">在线阅读主题首页</span>
+        <h1 id="hero-title">一本在线免费观看</h1>
+        <p class="hero-lead">
+          这是一份关于一本在线免费观看的使用说明页：围绕一本免费在线阅读的访问路径、章节浏览方式与阅读前的准备展开，
+          让第一次接触的读者知道从哪里进入、看到什么、需要注意什么，而不是在多个入口之间反复试探。
+        </p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="#access">进入阅读入口</a>
+          <a class="btn-ghost" href="#guide">查看使用步骤</a>
+        </div>
+        <p class="hero-note">页面内容为阅读方式与入口说明，不提供书籍文件，不承诺任何具体书目与更新速度。</p>
+      </div>
+
+      <aside class="hero-art" aria-label="阅读结构示意">
+        <p class="hero-art-title">页面结构一览</p>
+        <div class="shelf">
+          <div class="shelf-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1f4d3a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h7a2 2 0 0 1 2 2v12a2 2 0 0 0-2-2H4z"/><path d="M20 5h-7a2 2 0 0 0-2 2v12a2 2 0 0 1 2-2h7z"/></svg>
+            <span><b>入口</b>　找到一本在线免费观看的阅读页面</span>
+          </div>
+          <div class="shelf-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1f4d3a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+            <span><b>目录</b>　按章节顺序浏览，先看目录再读正文</span>
+          </div>
+          <div class="shelf-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1f4d3a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12"/><path d="M7 11l5 5 5-5"/><path d="M4 20h16"/></svg>
+            <span><b>记录</b>　用书签或进度记录接着上次继续</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ACCESS / CARDS -->
+  <section id="access" aria-labelledby="access-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-tag">阅读入口</p>
+        <h2 id="access-title">一本在线免费观看的三个常用入口</h2>
+        <p>不同读者进入一本免费在线阅读的方式并不相同。下面的三种路径对应不同的使用习惯，先判断自己属于哪一种，再决定从哪里开始。</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1f4d3a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 18v3"/></svg>
+          </div>
+          <h3>直接打开阅读页</h3>
+          <p>在浏览器中访问阅读地址，进入页面后在目录区域选择章节。适合已经知道要读哪一本、只想尽快看到正文的读者，也是多数人使用一本在线免费观看时的第一选择。</p>
+        </article>
+
+        <article class="card">
+          <div class="card-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1f4d3a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.2-4.2"/></svg>
+          </div>
+          <h3>先检索再阅读</h3>
+          <p>若只记得书名或作者的一部分，先用页面内的检索或目录查找，再进入对应章节。检索的作用是缩小范围，避免在大量条目里逐个翻找，减少反复跳转。</p>
+        </article>
+
+        <article class="card">
+          <div class="card-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1f4d3a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/><path d="M9 13h7"/><path d="M9 17h5"/></svg>
+          </div>
+          <h3>从历史记录续读</h3>
+          <p>浏览器书签或站内阅读记录可以保留上次停下的位置。再次访问时从记录处继续，比重新查找章节更省时间，这也是长期使用一本在线免费观看时较实用的一项习惯。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDE -->
+  <section class="guide" id="guide" aria-labelledby="guide-title">
+    <div class="wrap guide-grid">
+      <div>
+        <div class="sec-head">
+          <p class="sec-tag">使用步骤</p>
+          <h2 id="guide-title">第一次使用一本在线免费观看的流程</h2>
+          <p>把一次完整的阅读拆成四个动作，顺序执行即可，不需要额外设置。</p>
+        </div>
+        <ol class="steps">
+          <li>
+            <strong>确认阅读设备与网络</strong>
+            <span>手机、平板或电脑均可阅读。先确认网络稳定，再打开阅读页面，避免正文加载到一半中断。</span>
+          </li>
+          <li>
+            <strong>进入页面并查看目录</strong>
+            <span>找到目录区域，确认章节数量与起始位置。目录是判断内容结构最直接的部分，值得先花一二十秒浏览。</span>
+          </li>
+          <li>
+            <strong>选择章节开始阅读</strong>
+            <span>从第一章或上次停留的章节进入正文。页面内的翻页与返回目录入口可随时使用，不必担心中途走错。</span>
+          </li>
+          <li>
+            <strong>保存进度并继续</strong>
+            <span>阅读到阶段性位置时添加书签，下次直接回到此处。持续使用一本在线免费观看时，这一步能明显减少重复查找。</span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="guide-side">
+        <div class="sec-head" style="margin-bottom:20px">
+          <p class="sec-tag">阅读前准备</p>
+          <h2>开始前值得留意的几件事</h2>
+        </div>
+        <p>一本免费在线阅读的体验，很大一部分取决于阅读前是否做了简单准备。屏幕亮度、字号大小、行距设置都会直接影响长时间阅读的舒适度，建议在读完第一章后按需要调整，而不是硬撑。</p>
+        <p><strong>关于内容范围：</strong>本页只说明阅读入口与使用方式。可读的书目、章节数量与更新情况由实际阅读页面决定，本页不作具体承诺，也不代为收录或分发任何书籍内容。</p>
+        <ul class="checklist">
+          <li>先看目录结构，再决定从哪一章开始</li>
+          <li>长章节分段阅读，中间适当休息</li>
+          <li>需要长期阅读时，用书签记录进度</li>
+          <li>遇到页面无法打开，先检查网络再更换入口</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- READER PANEL / NOTICE -->
+  <section id="notice" aria-labelledby="notice-title">
+    <div class="wrap">
+      <div class="reader">
+        <div>
+          <p class="sec-tag" style="color:#e6d6ae">阅读须知</p>
+          <h2 id="notice-title">阅读体验与使用边界</h2>
+          <p>一本在线免费观看的价值在于把入口说清楚，而不是堆砌书目。页面只负责引导读者找到阅读位置，正文内容与章节更新由实际阅读站点提供。</p>
+          <p>阅读时请留意页面版权声明与使用条款。免费阅读不等于可以随意转载、复制或二次传播内容，个人阅读与商业使用之间有明显区别。</p>
+          <a class="btn-primary" href="#faq">查看常见问题</a>
+        </div>
+        <div class="mini" aria-label="使用要点">
+          <div><span>阅读设备</span><b>手机 / 平板 / 电脑</b></div>
+          <div><span>进入方式</span><b>浏览器直接访问</b></div>
+          <div><span>进度保存</span><b>书签或阅读记录</b></div>
+          <div><span>内容来源</span><b>以阅读页面为准</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="sec-tag">常见问题</p>
+        <h2 id="faq-title">关于一本在线免费观看的问答</h2>
+        <p>以下问题来自阅读入口与使用方式的常见困惑，回答只针对本页说明的范围。</p>
+      </div>
+
+      <div class="faq">
+        <details open>
+          <summary>一本在线免费观看需要注册账号吗？</summary>
+          <p>本页不涉及账号体系，是否注册取决于实际阅读页面。若只是浏览目录与正文，多数情况下直接访问即可；若需要保存进度或同步书签，按阅读页面的提示操作。</p>
+        </details>
+        <details>
+          <summary>在手机上阅读排版会乱吗？</summary>
+          <p>本页已按小屏适配，标题、正文与卡片在手机上均为单列排列，行长与字号控制在可读范围。实际阅读页面的排版以其自身设置为准，可在页面内调整字号。</p>
+        </details>
+        <details>
+          <summary>找不到想要的章节怎么办？</summary>
+          <p>先回到目录确认章节是否按顺序列出，再用页面检索功能查找书名或作者关键词。如果目录中确实没有，说明该内容不在当前阅读范围内，可更换入口或稍后再试。</p>
+        </details>
+        <details>
+          <summary>阅读进度保存在哪里？</summary>
+          <p>本页不保存阅读数据。进度一般由浏览器书签或阅读站点自身的记录功能保留，更换设备或清理浏览记录后可能丢失，重要位置建议手动记下章节名。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#f2e7c9"/>
+            <path d="M16 18h13a5 5 0 0 1 5 5v24a5 5 0 0 0-5-5H16z" fill="#1f4d3a"/>
+            <path d="M48 18H35a5 5 0 0 0-5 5v24a5 5 0 0 1 5-5h13z" fill="#2f6a51"/>
+          </svg>
+          <span>一本在线免费观看</span>
+        </div>
+        <p>一本在线免费观看主题首页，整理一本免费在线阅读的入口、使用步骤与阅读须知，帮助读者更快找到阅读位置。</p>
+      </div>
+      <div class="foot-col">
+        <h4>页面导航</h4>
+        <a href="#access">阅读入口</a>
+        <a href="#guide">使用步骤</a>
+        <a href="#notice">阅读须知</a>
+        <a href="#faq">常见问题</a>
+      </div>
+      <div class="foot-col">
+        <h4>阅读相关</h4>
+        <a href="#access">一本在线免费观看入口</a>
+        <a href="#guide">一本免费在线阅读流程</a>
+        <a href="#notice">阅读范围说明</a>
+        <a href="#faq">使用问题解答</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>本页仅提供阅读方式说明，不存储、不分发任何书籍内容。</span>
+      <span>一本在线免费观看 · 主题首页</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
