@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>动漫官网在线观看-动漫官方网站在线观看_新番动漫免费观看平台_高清动漫资源导航</title>
+<meta name="description" content="动漫官网在线观看主题首页，整理动漫官方网站在线观看的入口导航、新番更新节奏与高清动漫资源观看指南，帮助访问者快速找到想看的动漫作品与官方平台入口。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23151a33'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23ff6b9d' stroke-width='4'/%3E%3Cpath d='M27 23l16 9-16 9z' fill='%23ffd166'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#0f1224;
+  --bg-soft:#171b35;
+  --card:#1c2140;
+  --line:rgba(255,255,255,.1);
+  --text:#eef0ff;
+  --muted:#a7adcb;
+  --pink:#ff6b9d;
+  --yellow:#ffd166;
+  --cyan:#6be0ff;
+  --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+.wrap{width:min(1120px,92vw);margin:0 auto;}
+
+/* header */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(15,18,36,.86);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav-bar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.02rem;letter-spacing:.5px;}
+.logo .mark{width:38px;height:38px;flex:0 0 auto;}
+nav ul{display:flex;gap:22px;list-style:none;font-size:.92rem;color:var(--muted);}
+nav a:hover,nav a:focus{color:var(--yellow);}
+.nav-cta{
+  padding:9px 18px;border-radius:999px;
+  background:linear-gradient(135deg,var(--pink),#ff9d5c);
+  color:#1a1024;font-weight:700;font-size:.9rem;white-space:nowrap;
+}
+.nav-cta:hover{filter:brightness(1.08);}
+@media(max-width:780px){
+  nav{display:none;}
+}
+
+/* hero */
+.hero{
+  position:relative;overflow:hidden;
+  padding:64px 0 56px;
+  background:
+    radial-gradient(circle at 82% 12%,rgba(255,107,157,.22),transparent 42%),
+    radial-gradient(circle at 10% 88%,rgba(107,224,255,.16),transparent 46%),
+    var(--bg-soft);
+  border-bottom:1px solid var(--line);
+}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;}
+.tag{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.78rem;letter-spacing:1px;color:var(--yellow);
+  border:1px solid rgba(255,209,102,.4);border-radius:999px;
+  padding:5px 14px;margin-bottom:20px;
+}
+h1{
+  font-size:clamp(1.75rem,4.4vw,2.9rem);
+  line-height:1.28;font-weight:800;letter-spacing:.5px;
+  margin-bottom:20px;
+}
+h1 .hl{color:var(--pink);}
+.hero p.lead{color:var(--muted);font-size:1rem;max-width:34em;margin-bottom:28px;}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 26px;border-radius:999px;font-weight:700;font-size:.95rem;
+  transition:transform .18s ease,filter .18s ease;
+}
+.btn:hover{transform:translateY(-2px);}
+.btn-primary{background:linear-gradient(135deg,var(--pink),#ff9d5c);color:#1a1024;}
+.btn-ghost{border:1px solid var(--line);color:var(--text);background:rgba(255,255,255,.04);}
+.btn[aria-disabled="true"]{cursor:default;opacity:.9;}
+.hero-art{
+  border-radius:22px;overflow:hidden;
+  border:1px solid var(--line);
+  background:linear-gradient(160deg,#232a52,#151a33);
+  padding:18px;
+  box-shadow:0 24px 60px -30px rgba(255,107,157,.5);
+}
+.hero-art figcaption{font-size:.78rem;color:var(--muted);margin-top:10px;text-align:center;}
+
+/* sections */
+section{padding:58px 0;}
+.sec-head{margin-bottom:30px;}
+.sec-head h2{font-size:clamp(1.25rem,2.6vw,1.6rem);font-weight:800;letter-spacing:.4px;}
+.sec-head h2 span{color:var(--cyan);}
+.sec-head p{color:var(--muted);font-size:.94rem;margin-top:8px;max-width:48em;}
+
+/* entry cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;}
+.card{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius);padding:22px;
+  display:flex;flex-direction:column;gap:10px;
+  transition:border-color .2s ease,transform .2s ease;
+}
+.card:hover{border-color:rgba(255,107,157,.5);transform:translateY(-3px);}
+.card .ico{width:34px;height:34px;}
+.card h3{font-size:1.02rem;font-weight:700;}
+.card p{font-size:.88rem;color:var(--muted);}
+.card .go{font-size:.84rem;color:var(--yellow);margin-top:auto;font-weight:600;}
+
+/* schedule list */
+.schedule{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;}
+.day{
+  background:var(--bg-soft);border:1px solid var(--line);
+  border-radius:14px;padding:16px 18px;
+}
+.day .d{font-size:.78rem;color:var(--pink);letter-spacing:1px;font-weight:700;}
+.day ul{list-style:none;margin-top:8px;font-size:.88rem;color:var(--muted);display:grid;gap:5px;}
+.day ul li::before{content:"·";color:var(--yellow);margin-right:7px;}
+
+/* guide split */
+.guide{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start;}
+@media(max-width:860px){
+  .hero-grid,.guide{grid-template-columns:1fr;}
+}
+.guide .prose p{color:var(--muted);font-size:.93rem;margin-bottom:14px;}
+.guide .prose strong{color:var(--text);}
+.steps{list-style:none;display:grid;gap:12px;counter-reset:s;}
+.steps li{
+  counter-increment:s;
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:14px 16px 14px 54px;position:relative;font-size:.9rem;color:var(--muted);
+}
+.steps li::before{
+  content:counter(s);
+  position:absolute;left:16px;top:14px;
+  width:26px;height:26px;border-radius:8px;
+  background:rgba(255,209,102,.16);color:var(--yellow);
+  font-weight:800;font-size:.82rem;
+  display:flex;align-items:center;justify-content:center;
+}
+.steps li b{color:var(--text);}
+
+/* faq */
+.faq{display:grid;gap:12px;}
+details{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:14px;padding:16px 20px;
+}
+details[open]{border-color:rgba(107,224,255,.4);}
+summary{
+  cursor:pointer;font-weight:700;font-size:.95rem;list-style:none;
+  display:flex;justify-content:space-between;gap:12px;align-items:center;
+}
+summary::-webkit-details-marker{display:none;}
+summary::after{content:"+";color:var(--cyan);font-size:1.15rem;font-weight:700;}
+details[open] summary::after{content:"–";}
+details p{color:var(--muted);font-size:.89rem;margin-top:10px;}
+
+/* footer */
+footer{
+  border-top:1px solid var(--line);
+  background:var(--bg-soft);
+  padding:38px 0 30px;
+  font-size:.85rem;color:var(--muted);
+}
+.foot-grid{display:flex;flex-wrap:wrap;gap:26px;justify-content:space-between;align-items:flex-start;}
+.foot-brand{max-width:26em;}
+.foot-brand .logo{margin-bottom:12px;font-size:.96rem;}
+.foot-links{display:flex;flex-wrap:wrap;gap:22px;}
+.foot-links a:hover{color:var(--yellow);}
+.copy{margin-top:26px;padding-top:18px;border-top:1px solid var(--line);font-size:.78rem;color:#7b82a6;}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav-bar">
+    <a class="logo" href="#top" aria-label="动漫官网在线观看 首页">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#1c2140"/>
+        <circle cx="32" cy="32" r="17" fill="none" stroke="#ff6b9d" stroke-width="4"/>
+        <path d="M27 23l16 9-16 9z" fill="#ffd166"/>
+      </svg>
+      动漫官网在线观看
+    </a>
+    <nav aria-label="主导航">
+      <ul>
+        <li><a href="#entries">官方入口</a></li>
+        <li><a href="#schedule">新番日程</a></li>
+        <li><a href="#guide">观看指南</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+    <a class="nav-cta" href="#entries">开始观看</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="tag">官方入口 · 新番追踪 · 高清资源</span>
+        <h1>动漫官网在线观看</h1>
+        <p class="lead">把分散在各平台的官方观看入口集中到一个页面：新番首播时间、平台正版片源、往季补番路线，都能在这里找到入口与说明。想省去反复搜索的时间，从这一页开始。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#entries">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+            查看官方入口
+          </a>
+          <a class="btn btn-ghost" href="#guide">观看指南</a>
+        </div>
+      </div>
+      <figure class="hero-art">
+        <svg viewBox="0 0 420 240" role="img" aria-label="动漫观看界面示意图">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ff6b9d" stop-opacity=".9"/>
+              <stop offset="1" stop-color="#6be0ff" stop-opacity=".7"/>
+            </linearGradient>
+          </defs>
+          <rect x="10" y="16" width="400" height="150" rx="14" fill="#101430" stroke="#2a3060"/>
+          <rect x="26" y="32" width="250" height="14" rx="7" fill="#2a3060"/>
+          <rect x="26" y="54" width="170" height="10" rx="5" fill="#232a52"/>
+          <circle cx="330" cy="60" r="22" fill="none" stroke="url(#g1)" stroke-width="4"/>
+          <path d="M323 51l16 9-16 9z" fill="#ffd166"/>
+          <rect x="26" y="84" width="368" height="8" rx="4" fill="#232a52"/>
+          <rect x="26" y="84" width="210" height="8" rx="4" fill="#ff6b9d"/>
+          <circle cx="236" cy="88" r="6" fill="#ffd166"/>
+          <rect x="26" y="108" width="110" height="34" rx="9" fill="#1c2140" stroke="#333a6e"/>
+          <rect x="148" y="108" width="110" height="34" rx="9" fill="#1c2140" stroke="#333a6e"/>
+          <rect x="270" y="108" width="124" height="34" rx="9" fill="#1c2140" stroke="#333a6e"/>
+          <text x="26" y="131" font-size="13" fill="#a7adcb" font-family="sans-serif">新番首播</text>
+          <text x="148" y="131" font-size="13" fill="#a7adcb" font-family="sans-serif">往季补番</text>
+          <text x="270" y="131" font-size="13" fill="#a7adcb" font-family="sans-serif">剧场版专场</text>
+          <rect x="26" y="152" width="86" height="6" rx="3" fill="#2a3060"/>
+          <rect x="124" y="152" width="52" height="6" rx="3" fill="#2a3060"/>
+          <rect x="188" y="152" width="64" height="6" rx="3" fill="#2a3060"/>
+          <text x="10" y="200" font-size="15" fill="#eef0ff" font-family="sans-serif" font-weight="bold">官方平台片源，一页直达</text>
+          <text x="10" y="224" font-size="12" fill="#a7adcb" font-family="sans-serif">动漫官网在线观看 · 观看入口导航示意图</text>
+        </svg>
+        <figcaption>观看入口与播放列表示意</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ENTRIES -->
+  <section id="entries">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>官方观看入口 <span>按内容类型整理</span></h2>
+        <p>不同内容类型对应的官方平台并不相同。下面按新番、往季与剧场版三类场景给出入口说明，方便第一次使用动漫官网在线观看的访问者快速判断该去哪里。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#ff6b9d" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M10 8l5 3-5 3z"/></svg>
+          <h3>当季新番首播</h3>
+          <p>当季新番通常由取得授权的平台同步更新，更新时间以各平台公布的排期为准。首播集上线后，后续集数按每周固定节奏放出。</p>
+          <span class="go">入口说明见下方日程</span>
+        </article>
+        <article class="card">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#ffd166" stroke-width="1.8" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="M4 9h16M9 5v14"/></svg>
+          <h3>往季作品补番</h3>
+          <p>往季完结作品多数仍保留在平台片库中，可按年份或分季顺序回看。补番前建议先确认平台是否已下架某部作品的版权页。</p>
+          <span class="go">适合按季顺序回看</span>
+        </article>
+        <article class="card">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#6be0ff" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>
+          <h3>剧场版与特别篇</h3>
+          <p>剧场版、OVA 与特别篇的上线节奏与新番不同，常见做法是先在院线或活动放映，再于平台上线。具体档期以官方公告为准确依据。</p>
+          <span class="go">以官方公告为准</span>
+        </article>
+        <article class="card">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="#ff9d5c" stroke-width="1.8" aria-hidden="true"><path d="M12 3l2.6 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.3 2.9 1-6.1L3.3 9.5l6.1-.9z"/></svg>
+          <h3>收藏与追番清单</h3>
+          <p>多数官方平台提供追番与收藏功能，开启更新提醒后可在新集上线时收到通知。把作品加入清单，比每次重新搜索更省时间。</p>
+          <span class="go">建议开启更新提醒</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHEDULE -->
+  <section id="schedule" style="background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>新番更新 <span>一周节奏参考</span></h2>
+        <p>新番的更新日由平台排期决定，同一作品在不同平台的更新时间也可能不同。下表是常见的周更节奏划分方式，具体时间请以对应平台的官方页面为准。</p>
+      </div>
+      <div class="schedule">
+        <div class="day">
+          <div class="d">周一 / 周二</div>
+          <ul><li>日常向、校园题材集中上线</li><li>适合下班后连看两集</li></ul>
+        </div>
+        <div class="day">
+          <div class="d">周三 / 周四</div>
+          <ul><li>轻改与漫画改编作品较多</li><li>更新后次日讨论热度较高</li></ul>
+        </div>
+        <div class="day">
+          <div class="d">周五 / 周六</div>
+          <ul><li>热门续作与话题作常排在此档</li><li>建议提前开启更新提醒</li></ul>
+        </div>
+        <div class="day">
+          <div class="d">周日</div>
+          <ul><li>合家欢与长篇连载更新</li><li>适合一次性补完本周进度</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDE -->
+  <section id="guide">
+    <div class="wrap guide">
+      <div class="prose">
+        <div class="sec-head" style="margin-bottom:18px;">
+          <h2>观看指南 <span>从搜索到播放</span></h2>
+        </div>
+        <p>想把动漫官网在线观看这件事做得更顺，关键不是记住更多网址，而是建立一套稳定的查找顺序。<strong>先确认作品名称与季数，再确认版权归属平台，最后核对更新状态</strong>，这三步能过滤掉大部分无效入口。</p>
+        <p>作品名称是最容易出错的环节。中文译名、日文原名与英文标题可能指向同一部作品，搜索时建议同时准备两个名称。季数同样重要，续作的第几季往往单独建条目，误点会看到进度错位。</p>
+        <p>确认平台后，留意页面上的更新状态标签：连载中、已完结、暂未上线，三种状态对应的观看预期完全不同。对于连载中的作品，官方平台通常会在片源页标注下一集上线时间。</p>
+        <p>画质与字幕属于体验层面的选择。多数官方平台提供多档清晰度，网络条件一般时优先保证播放流畅；字幕版本则以平台实际提供的语种为准，不必过于依赖第三方描述。</p>
+      </div>
+      <ol class="steps">
+        <li><b>准备两个名称</b>：中文译名与日文原名各记一个，减少搜索偏差。</li>
+        <li><b>核对季数与条目</b>：续作分季建条目，确认集数起点再播放。</li>
+        <li><b>确认版权平台</b>：以官方页面标注的授权信息为准。</li>
+        <li><b>查看更新状态</b>：连载中、已完结、暂未上线分别处理。</li>
+        <li><b>开启追番提醒</b>：加入清单后等待新集通知。</li>
+        <li><b>选择合适画质</b>：按网络情况切换清晰度，保证流畅优先。</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" style="background:var(--bg-soft);border-top:1px solid var(--line);">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>常见问题</h2>
+        <p>围绕动漫官网在线观看整理的高频疑问，答案以平台通行做法与官方公告为准，不涉及未公开信息。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>为什么同一部动漫在不同平台更新时间不同？</summary>
+          <p>各平台的授权范围、上线排期与地区策略存在差异，因此更新时间并不统一。以你实际使用的平台页面标注时间为准，不要用其他平台的排期推断。</p>
+        </details>
+        <details>
+          <summary>新番一般多久更新一集？</summary>
+          <p>常规电视动画多为每周一集，按季播出。部分作品会因制作或排播安排调整档期，出现延期或连播的情况，这类变动通常会在官方渠道公告。</p>
+        </details>
+        <details>
+          <summary>往季作品会一直保留在片库吗？</summary>
+          <p>不一定。版权授权通常有期限，到期后作品可能下架或更换平台。遇到找不到的往季作品，先确认平台版权页状态，再考虑其他官方渠道。</p>
+        </details>
+        <details>
+          <summary>追番提醒在哪里开启？</summary>
+          <p>多数官方平台在作品详情页提供收藏或追番按钮，开启后由平台推送更新通知。具体入口名称各平台略有不同，可在详情页寻找收藏类按钮。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="logo">
+          <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#232a52"/>
+            <circle cx="32" cy="32" r="17" fill="none" stroke="#ff6b9d" stroke-width="4"/>
+            <path d="M27 23l16 9-16 9z" fill="#ffd166"/>
+          </svg>
+          动漫官网在线观看
+        </div>
+        <p>围绕动漫官网在线观看整理的入口导航与观看指南，帮助访问者按名称、季数与更新状态找到对应官方平台页面。本页不存储片源，观看与版权以各官方平台页面为准。</p>
+      </div>
+      <div class="foot-links">
+        <a href="#entries">官方入口</a>
+        <a href="#schedule">新番日程</a>
+        <a href="#guide">观看指南</a>
+        <a href="#faq">常见问题</a>
+      </div>
+    </div>
+    <div class="copy">
+      © 动漫官网在线观看 · 本页内容为观看入口与使用方法说明，具体排期与版权信息请以官方平台公告为准。
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
